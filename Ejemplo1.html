@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Prueba 1*/
+        .general{
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+            color: white;
+        }
+        @font-face {
+            font-family: explora;
+            src: url(Explora-Regular.woff);
+        }
+        #DP1{
+            background: repeating-linear-gradient(blueviolet, green);
+        }
+        #DP1:hover{
+            transform:scale(1,5);
+            font-family: explora;
+        }
+        /*Prueba 2*/
+        #interno
+        {
+            background: repeating-linear-gradient(red, orange);
+            transition: transform 3s;
+        }
+        #interno:hover
+        {
+            transform: rotateY(180deg);
+        }
+        #externo
+        {
+            border: red 2px dashed;
+        }
+        /*Prueba 3*/
+        #DP3
+        {
+            transition: all 3s;
+            background:blue 
+        }
+        #externo2
+        {
+            border: red 2px dashed;
+        }
+        #externo2:hover #DP3
+        {
+            transform:rotate(360deg) scale(1.5,1.5) translate(100px,0px);
+        }
+        /*Prueba 4*/
+
+        #DP4
+        {
+            background: url(./seamless.jpg) repeat;
+            transition: all 4s;
+        }
+        #externo3{
+            border: red 2px dashed;
+        }
+        #externo3:hover #DP4{
+            transform: scale(2,1.5);
+        }
+        /*Prueba 5*/
+        #DP5
+        {
+            background-color: chartreuse;
+            animation: tiemblo linear infinite 1s;
+        }
+        @keyframes tiemblo{
+            0%{transform: rotate(4deg);}
+            50%{transform: rotate(-4deg);}
+            100%{transform: rotate(4deg);}
+        }
+        #DP6{
+            animation: giros linear infinite 1.5s;
+            background-color: tomato;
+        }
+        @keyframes giros{
+            0%{transform: rotate(0deg) translate(25px) rotate(0deg);}
+            100%{transform: rotate(360deg) translate(25px) rotate(-360deg);}
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">PRUEBA 1</h1>
+    <div class="general" id="DP1">Victor Lopez Fernandez</div>
+    <br>
+    <div class="general" id="externo">
+        <div class="general" id="interno">Victor Lopez Fernandez</div>
+    </div>
+    <br>
+    <div class="general" id="externo2">
+        <div class="general" id="DP3">Victor Lopez Fernandez</div>
+    </div>
+    <br>
+    <div class="general" id="externo3">
+        <div class="general" id="DP4">Victor Lopez Fernandez</div>
+    </div>
+    <br>
+    <div class="general" id="externo4">
+        <div class="general" id="DP5">Victor Lopez Fernandez</div>
+    </div>
+    <br>
+    <div>
+        <div class="general" id="DP6">Victor Lopez Fernandez</div>
+    </div>
+</body>
+</html>
